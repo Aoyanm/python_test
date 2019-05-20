@@ -1,0 +1,56 @@
+http://ptlogin.4399.com/ptlogin/loginFrame.do?postLoginHandler=default&redirectUrl=&displayMode=popup&css=&appId=www_home&gameId=&username=&externalLogin=qq&password=&mainDivId=popup_login_div&autoLogin=false&includeFcmInfo=false&qrLogin=true&v=1548041190748
+
+µÇÂ¼µØÖ·
+
+
+gitµÇÂ¼
+https://github.com/login
+
+
+
+
+
+
+
+°¸Àý
+
+1£º
+
+session = requests.Session()
+
+#µÇÉÏdoubanÎªÀý£º
+
+payload = {'form_email': 'ssss', 'form_password': 'password'}
+r = session.post('https://accounts.douban.com/login', data=payload)
+print(r.cookies.get_dict())
+r = session.get("https://accounts.douban.com/login?source=movie")
+print(r.text)
+
+2£º
+
+payload = {'form_email': 'Morvan', 'form_password': 'password'}
+r = requests.post('https://accounts.douban.com/login', data=payload)
+print(r.cookies.get_dict())
+r = requests.get('https://accounts.douban.com/login?source=movie', cookies=r.cookies)
+print(r.text)
+
+
+
+
+
+
+
+
+
+
+
+commit: Sign in
+utf8: ?
+authenticity_token: 9YLTkijoVewGhHJkoT5YKAWDgH6+CFTxG9PNBXallWM7T2ioHtneSJshPBlZMfbnqy8zP+NNt42bUFLur23n+g==
+login: 111111
+password: 111111
+
+
+
+
+https://github.com/settings/emails

@@ -1,0 +1,14 @@
+requests
+    obj = requests.get('url',headers)
+    obj.content 二进制
+    obj.text 文本
+    obj.encoding = "utf-8"
+    
+    
+    
+    
+    obj = BeautifulSoup(obj.text,'html.parser')
+    obj.find('标签')
+    obj.find_all('标签')
+    obj.atttrs["name":"name"]
+    obj.get
